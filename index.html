@@ -2,20 +2,71 @@
 <html lang="hi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anmol Study Hub | UP Board Class 12 Maths Mock Tests</title>
+<title>Anmol Study Hub | UP Board Class 12 Study & Mock Tests</title>
 <style>
-:root{--navy:#142b4a;--blue:#2563eb;--bg:#f4f7fc;--ink:#182338;--muted:#64748b;--green:#16834a;--red:#b42318}
+:root{--navy:#142b4a;--blue:#2563eb;--bg:#f4f7fc;--ink:#182338;--muted:#64748b;--green:#16834a;--red:#b42318;--card:#fff;--line:#e1e7f0}
+body.dark{--bg:#0d1424;--ink:#e8eefb;--muted:#aab7cf;--card:#151f33;--line:#2a3852}
+
 *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,'Noto Sans Devanagari',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
-header{background:linear-gradient(135deg,#142b4a,#2563eb);color:white;padding:25px 15px;text-align:center}header h1{margin:0;font-size:clamp(1.5rem,5vw,2.2rem)}header p{margin:7px 0 0}
-.wrap{max-width:900px;margin:18px auto;padding:0 12px}.panel{background:#fff;border-radius:16px;padding:17px;margin-bottom:14px;box-shadow:0 5px 22px #1831530c}
-label{display:block;font-weight:700;margin:0 0 6px}select,button{font:inherit;border-radius:10px;padding:12px;border:1px solid #ccd5e2;width:100%;background:white;color:var(--ink)}button{border:0;background:var(--blue);color:white;font-weight:750;cursor:pointer}button:disabled{opacity:.5}.row{display:grid;grid-template-columns:1fr;gap:12px}@media(min-width:620px){.row{grid-template-columns:1fr 1fr}}
+header{background:linear-gradient(135deg,#142b4a,#2563eb);color:white;padding:25px 15px;text-align:center;position:relative}header h1{margin:0;font-size:clamp(1.5rem,5vw,2.2rem)}header p{margin:7px 0 0}
+.wrap{max-width:900px;margin:18px auto;padding:0 12px}.panel{background:var(--card);border-radius:16px;padding:17px;margin-bottom:14px;box-shadow:0 5px 22px #1831530c}
+label{display:block;font-weight:700;margin:0 0 6px}select,button{font:inherit;border-radius:10px;padding:12px;border:1px solid #ccd5e2;width:100%;background:var(--card);color:var(--ink)}button{border:0;background:var(--blue);color:white;font-weight:750;cursor:pointer}button:disabled{opacity:.5}.row{display:grid;grid-template-columns:1fr;gap:12px}@media(min-width:620px){.row{grid-template-columns:1fr 1fr}}
 .pill{display:inline-block;background:#eaf0ff;color:#204fc0;border-radius:999px;padding:4px 10px;font-size:.85rem;font-weight:700}.subtle{color:var(--muted);font-size:.92rem}.timer{font-size:1.2rem;font-weight:800;background:#fff1f0;color:#b42318;padding:7px 12px;border-radius:10px}
-.question{border:1px solid #e1e7f0;border-radius:12px;padding:14px;margin:12px 0}.question h3{font-size:1rem;margin:0 0 10px}.option{display:flex;gap:9px;align-items:flex-start;border:1px solid #e0e5ed;padding:10px;border-radius:9px;margin:7px 0;cursor:pointer}.option input{margin-top:5px;accent-color:#2563eb}.option:has(input:checked){background:#eef3ff;border-color:#7b9cff}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.secondary{background:#e8edf5;color:#172033}.result{padding:14px;border-radius:12px;background:#eefaf2;border:1px solid #c4ebd0}.review-item{padding:10px 0;border-bottom:1px solid #e4e9f1}.hide{display:none}.notice{background:#fff8e7;border:1px solid #f1d78e;border-radius:10px;padding:12px;font-size:.92rem}
+.question{border:1px solid var(--line);border-radius:12px;padding:14px;margin:12px 0}.question h3{font-size:1rem;margin:0 0 10px}.option{display:flex;gap:9px;align-items:flex-start;border:1px solid var(--line);padding:10px;border-radius:9px;margin:7px 0;cursor:pointer}.option input{margin-top:5px;accent-color:#2563eb}.option:has(input:checked){background:#eef3ff;border-color:#7b9cff}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.secondary{background:#e8edf5;color:#172033}.result{padding:14px;border-radius:12px;background:#eefaf2;border:1px solid #c4ebd0}.review-item{padding:10px 0;border-bottom:1px solid #e4e9f1}.hide{display:none}.notice{background:#fff8e7;border:1px solid #f1d78e;border-radius:10px;padding:12px;font-size:.92rem}
 footer{text-align:center;color:var(--muted);font-size:.85rem;padding:12px 15px 25px}
+
+.hero-tools{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:14px}
+.tool-btn{width:auto;padding:8px 12px;border:1px solid #ffffff66;background:#ffffff18;color:#fff;font-size:.9rem}
+.stats-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+.stat{padding:13px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.stat b{display:block;font-size:1.25rem}.stat span{color:var(--muted);font-size:.86rem}
+.subject-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.subject-card{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:13px;border-radius:12px;text-align:left}
+.subject-card strong{display:block}.subject-card small{color:var(--muted)}
+.progress-track{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin:10px 0 4px}
+.progress-fill{height:100%;width:0;background:#2563eb;transition:width .2s}
+.result-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:12px}
+.metric{padding:10px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.metric b{display:block;font-size:1.1rem}
+.review-item{border-bottom:1px solid var(--line)}
+.notice{color:var(--ink)}
+.result-hero{background:linear-gradient(135deg,#1557c0,#2677f5);color:#fff;border-radius:16px;padding:20px;margin-bottom:12px;box-shadow:0 8px 22px #2563eb25}
+.result-hero h3{margin:0 0 5px}.result-hero .big-score{font-size:2rem;font-weight:850;line-height:1.2}.result-hero p{margin:7px 0 0;opacity:.94}
+.analysis-card{padding:16px;border:1px solid var(--line);border-radius:15px;background:var(--card);margin-top:12px}
+.analysis-layout{display:grid;grid-template-columns: minmax(125px, .85fr) 1fr;gap:14px;align-items:center}
+.donut{width:min(42vw,175px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;margin:auto;background:conic-gradient(#16a765 0% var(--correct),#e02d3c var(--correct) var(--wrong-end),#cbd5e1 var(--wrong-end) 100%);position:relative}
+.donut:before{content:"";position:absolute;inset:15%;border-radius:50%;background:var(--card)}.donut-center{position:relative;text-align:center;line-height:1.3}.donut-center b{font-size:1.55rem;display:block}.donut-center span{font-size:.78rem;color:var(--muted)}
+.legend-row{display:flex;align-items:center;gap:8px;font-size:.9rem;margin:9px 0}.dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:none}.legend-row strong{margin-left:auto}
+.attempt-rate{background:var(--bg);border:1px solid var(--line);border-radius:10px;text-align:center;padding:9px;margin-top:12px}.attempt-rate b{display:block;color:#16a765;font-size:1.35rem}
+.view-solutions{width:100%;margin-top:15px;padding:15px;font-size:1.08rem;border-radius:12px;box-shadow:0 4px 12px #2563eb2a}
+.filter-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:14px 0}.filter-tab{padding:10px 5px;font-size:.88rem;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:10px}.filter-tab.active{background:#172033;color:#fff;border-color:#172033}.filter-tab.correct.active{background:#16834a}.filter-tab.incorrect.active{background:#b42318}.filter-tab.unattempted.active{background:#64748b}
+.review-item{padding:14px;margin:10px 0;border:1px solid var(--line);border-radius:12px;background:var(--card)}.review-status{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.8rem;font-weight:800;margin:4px 0 8px}.status-correct{background:#dcfce7;color:#166534}.status-incorrect{background:#fee2e2;color:#991b1b}.status-unattempted{background:#e2e8f0;color:#334155}.review-solution{background:var(--bg);padding:11px;border-radius:9px;margin-top:10px}.empty-review{padding:20px;text-align:center;color:var(--muted);background:var(--bg);border-radius:10px}
+@media(max-width:420px){.analysis-layout{grid-template-columns:1fr 1fr;gap:8px}.legend-row{font-size:.82rem}.filter-tab{font-size:.78rem}}
+@media(min-width:620px){.subject-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.stats-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 </style></head>
 <body>
-<header><h1>📘 Anmol Study Hub</h1><p>UP Board कक्षा 12 • हिंदी माध्यम • गणित अध्यायवार Mock Test</p></header>
+<header><h1>📘 Anmol Study Hub</h1><p>UP Board कक्षा 12 • हिंदी माध्यम • सीखें, अभ्यास करें और बेहतर बनें</p>
+<div class="hero-tools"><button class="tool-btn" id="themeToggle" type="button">🌙 Dark Mode</button><button class="tool-btn" id="topTestBtn" type="button">📝 Mock Test पर जाएँ</button></div></header>
 <main class="wrap">
+<section class="panel">
+<span class="pill">आपका Study Dashboard</span>
+<h2 style="margin:10px 0 4px">नमस्ते विद्यार्थी! 👋</h2>
+<p class="subtle" style="margin-top:0">आज थोड़ा अभ्यास भी आपकी तैयारी को मजबूत बना सकता है। एक अध्याय चुनें और अपना ज्ञान जाँचें।</p>
+<div class="stats-grid">
+<div class="stat"><b>13</b><span>गणित अध्याय</span></div>
+<div class="stat"><b>15</b><span>प्रति टेस्ट प्रश्न</span></div>
+<div class="stat"><b>3</b><span>टाइमर विकल्प</span></div>
+<div class="stat"><b>∞</b><span>दोबारा अभ्यास</span></div>
+</div>
+<h3>📚 विषय चुनें</h3>
+<div class="subject-grid">
+<button class="subject-card" type="button" data-subject="math"><strong>➗ गणित</strong><small>Mock tests उपलब्ध</small></button>
+<button class="subject-card" type="button" data-subject="physics"><strong>⚛️ भौतिक विज्ञान</strong><small>जल्द उपलब्ध होगा</small></button>
+<button class="subject-card" type="button" data-subject="chemistry"><strong>🧪 रसायन विज्ञान</strong><small>जल्द उपलब्ध होगा</small></button>
+<button class="subject-card" type="button" data-subject="other"><strong>📖 हिंदी / अंग्रेज़ी</strong><small>जल्द उपलब्ध होगा</small></button>
+</div>
+<p id="subjectNotice" class="subtle" aria-live="polite">अभी गणित के टेस्ट उपलब्ध हैं। अन्य विषयों को सही प्रश्न-सामग्री तैयार होने पर जोड़ा जाएगा।</p>
+</section>
 <section class="panel" id="setup">
 <span class="pill">अपना टेस्ट चुनें</span>
 <div class="row" style="margin-top:12px">
@@ -27,11 +78,11 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:12px 15px 2
 </section>
 <section id="quizPanel" class="panel hide">
 <div style="display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap"><span id="testTitle" class="pill"></span><span id="progress" class="subtle">15 प्रश्न</span><span id="timer" class="timer">20:00</span></div>
-<div id="questions"></div><button id="submit" type="button" style="position:relative;z-index:5;touch-action:manipulation">टेस्ट जमा करें</button>
+<div class="progress-track" aria-label="प्रश्न प्रगति"><div class="progress-fill" id="progressFill"></div></div><div id="questions"></div><button id="submit" type="button" style="position:relative;z-index:5;touch-action:manipulation">टेस्ट जमा करें</button>
 <p class="subtle">ध्यान दें: जमा करने के बाद उत्तर बदले नहीं जा सकेंगे।</p>
 </section>
-<section id="resultPanel" class="panel hide"><h2 style="margin-top:0">आपका परिणाम</h2><div id="score" class="result"></div><div id="review"></div><div class="actions"><button id="retry" class="secondary">इसी अध्याय का टेस्ट फिर दें</button><button id="change">दूसरा अध्याय चुनें</button></div></section>
-<section class="panel"><h3 style="margin-top:0">वेबसाइट के बारे में</h3><div class="notice">यह Anmol Study Hub का अभ्यास संस्करण है, आधिकारिक UPMSP वेबसाइट नहीं। प्रश्न अभ्यास के लिए हैं; बोर्ड परीक्षा के नवीनतम पाठ्यक्रम से अध्यायों का मिलान कर लें। अभी यह संस्करण गणित के अध्यायवार टेस्ट पर केंद्रित है।</div></section>
+<section id="resultPanel" class="panel hide"><h2 style="margin-top:0">📊 आपका परिणाम</h2><div id="score"></div><div id="resultMetrics" class="result-metrics"></div><div id="analysis"></div><button id="viewSolutions" class="view-solutions" type="button">📘 View Solutions / हल देखें</button><div id="solutionsArea" class="hide"><h3>📝 प्रश्नों का विश्लेषण</h3><div id="filterTabs" class="filter-tabs"></div><div id="review"></div></div><div class="actions"><button id="retry" class="secondary">इसी अध्याय का टेस्ट फिर दें</button><button id="change">दूसरा अध्याय चुनें</button></div></section>
+<section class="panel"><h3 style="margin-top:0">वेबसाइट के बारे में</h3><div class="notice">यह Anmol Study Hub का अभ्यास संस्करण है, आधिकारिक UPMSP वेबसाइट नहीं। प्रश्न अभ्यास के लिए हैं; बोर्ड परीक्षा के नवीनतम पाठ्यक्रम से अध्यायों का मिलान कर लें। अभी इस संस्करण में गणित के अध्यायवार टेस्ट उपलब्ध हैं। अन्य विषयों के टेस्ट बाद में प्रश्न-सामग्री तैयार करके जोड़े जा सकते हैं।</div></section>
 </main><footer>बनाया गया Anmol के लिए ❤️ • अभ्यास करते रहें!</footer>
 <script>
 const chapters=[
@@ -40,24 +91,39 @@ const chapters=[
 'अध्याय 8: समाकलनों के अनुप्रयोग','अध्याय 9: अवकल समीकरण','अध्याय 10: सदिश बीजगणित',
 'अध्याय 11: त्रिविमीय ज्यामिति','अध्याय 12: रैखिक प्रोग्रामन','अध्याय 13: प्रायिकता'];
 const chapter=document.getElementById('chapter');
+const themeToggle=document.getElementById('themeToggle');
+themeToggle.addEventListener('click',()=>{
+ document.body.classList.toggle('dark');
+ const dark=document.body.classList.contains('dark');
+ themeToggle.textContent=dark?'☀️ Light Mode':'🌙 Dark Mode';
+ try{localStorage.setItem('ash-theme',dark?'dark':'light')}catch(e){}
+});
+try{if(localStorage.getItem('ash-theme')==='dark'){document.body.classList.add('dark');themeToggle.textContent='☀️ Light Mode'}}catch(e){}
+document.getElementById('topTestBtn').addEventListener('click',()=>document.getElementById('setup').scrollIntoView({behavior:'smooth'}));
+document.querySelectorAll('[data-subject]').forEach(btn=>btn.addEventListener('click',()=>{
+ const s=btn.dataset.subject;
+ document.getElementById('subjectNotice').textContent=s==='math'?'गणित के सभी 13 अध्यायों में से टेस्ट चुनें।':'इस विषय की टेस्ट सामग्री अभी तैयार की जा रही है। फिलहाल गणित के टेस्ट उपलब्ध हैं।';
+ if(s==='math')document.getElementById('setup').scrollIntoView({behavior:'smooth'});
+}));
+
 chapters.forEach((c,i)=>{let o=document.createElement('option');o.value=i;o.textContent=c;chapter.appendChild(o)});
 const bank = {
 0:[
-['यदि A में 2 अवयव और B में 3 अवयव हैं, तो A से B में कुल फलन कितने होंगे?',['6','8','9','12'],2,'n अवयवों से m अवयवों में फलनों की संख्या mⁿ होती है: 3² = 9।'],
-['यदि A={1,2} और B={a,b} हों, तो A×B में कितने क्रमित युग्म होंगे?',['2','3','4','8'],2,'कार्तीय गुणनफल में 2×2=4 क्रमित युग्म होंगे।'],
-['f(x)=3x−2 हो, तो f(4) क्या है?',['8','10','12','14'],1,'f(4)=3×4−2=10।'],
-['फलन में प्रांत के प्रत्येक अवयव की कितनी छवि होती है?',['ठीक एक','कम-से-कम दो','कोई नहीं','दो'],0,'फलन में प्रांत के हर अवयव की सह-प्रांत में ठीक एक छवि होती है।'],
-['यदि f(x)=x², तो f(−3) का मान है?',['−9','−6','6','9'],3,'(−3)²=9।'],
-['एकैकी फलन की शर्त है:',['f(a)=f(b) ⇒ a=b','a=b ⇒ f(a)≠f(b)','हर छवि समान हो','प्रांत खाली हो'],0,'एकैकी फलन में समान छवियों के मूल अवयव भी समान होते हैं।'],
-['आच्छादक फलन में सह-प्रांत का प्रत्येक अवयव क्या होता है?',['अप्रयुक्त','कम-से-कम एक अवयव की छवि','केवल शून्य','प्रांत से बाहर'],1,'आच्छादक फलन में सह-प्रांत का हर अवयव किसी न किसी अवयव की छवि होता है।'],
-['यदि f(x)=2x+5, तो f(0)=?',['0','2','5','7'],2,'f(0)=2×0+5=5।'],
-['समुच्चय A से A में संबंधों की संख्या, यदि |A|=2, है:',['2','4','8','16'],3,'A×A में 4 युग्म हैं; संबंधों की संख्या 2⁴=16।'],
-['यदि f(x)=x+1, तो f(2) का मान है:',['1','2','3','4'],2,'f(2)=2+1=3।'],
-['रिक्त समुच्चय से किसी अशून्य समुच्चय B में कितने फलन होते हैं?',['0','1','|B|','अनंत'],1,'रिक्त प्रांत से ठीक एक रिक्त फलन होता है।'],
-['यदि f(x)=x² और प्रांत R हो, तो f का परास है:',['R','(−∞,0]','[0,∞)','(0,∞)'],2,'वास्तविक x का वर्ग ऋणात्मक नहीं होता और 0 भी प्राप्त होता है।'],
-['स्थिर फलन का उदाहरण कौन-सा है?',['f(x)=x','f(x)=x²','f(x)=4','f(x)=2x'],2,'f(x)=4 हर x के लिए समान मान देता है।'],
-['यदि f(x)=5−x, तो f(2)=?',['2','3','5','7'],1,'5−2=3।'],
-['A से B में फलन f का सह-प्रांत किसे कहते हैं?',['A','B','केवल परास','A×B'],1,'यदि f:A→B है, तो B सह-प्रांत है।']
+['यदि f(x)=(3−x³)^(1/3), तो f(f(x)) का मान क्या है?',['x','−x','3−x','x³'],0,'f(f(x))= [3−(f(x))³]^(1/3)। क्योंकि (f(x))³=3−x³, इसलिए f(f(x))=[3−(3−x³)]^(1/3)=x।'],
+['R={(x,y): x=y−3, y>3} में कौन-सा क्रमित युग्म R में है?',['(2,5)','(5,2)','(3,3)','(1,2)'],0,'x=y−3 और y>3 होना चाहिए। (2,5) में 2=5−3 और 5>3, इसलिए यह R में है।'],
+['A={1,2,3,4,5} पर R={(a,b): b=a+2} हो, तो R कौन-सा है?',['{(1,3),(2,4),(3,5)}','{(1,2),(2,3)}','{(3,1),(4,2)}','{(1,5),(2,5)}'],0,'b=a+2 रखने पर a=1,2,3 के लिए b=3,4,5 मिलते हैं; इसलिए R={(1,3),(2,4),(3,5)}।'],
+['किसी समुच्चय A पर संबंध R के सममित होने की शर्त क्या है?',['(a,b)∈R ⇒ (b,a)∈R','(a,a)∈R सभी a के लिए','(a,b),(b,c)∈R ⇒ (a,c)∈R','हर a का केवल एक प्रतिबिम्ब'],0,'सममित संबंध में (a,b) होने पर उल्टा युग्म (b,a) भी होना चाहिए।'],
+['किसी समुच्चय A पर संबंध R स्वतुल्य कब कहलाता है?',['हर a∈A के लिए (a,a)∈R','हर (a,b) के लिए (b,a)∈R','हर (a,b),(b,c) के लिए (a,c)∈R','R में कोई युग्म न हो'],0,'स्वतुल्य संबंध में प्रत्येक अवयव का स्वयं से संबंध होना जरूरी है।'],
+['समतुल्य संबंध के लिए कौन-सी तीन विशेषताएँ आवश्यक हैं?',['स्वतुल्य, सममित और संक्रामक','केवल सममित','केवल स्वतुल्य','सममित और एकैकी'],0,'समतुल्य संबंध स्वतुल्य, सममित तथा संक्रामक—तीनों होता है।'],
+['यदि f:R*→R* को f(x)=1/x से परिभाषित करें, तो f है:',['एकैकी और आच्छादक','एकैकी पर आच्छादक नहीं','आच्छादक पर एकैकी नहीं','न एकैकी न आच्छादक'],0,'यदि 1/x₁=1/x₂ तो x₁=x₂, अतः एकैकी। हर y∈R* के लिए x=1/y∈R* लेने पर f(x)=y, अतः आच्छादक।'],
+['यदि A में m अवयव और B में n अवयव हैं, तो A से B में कुल फलनों की संख्या है:',['mⁿ','nᵐ','m+n','mn'],1,'A के प्रत्येक m अवयव के लिए B के n विकल्प हैं, इसलिए कुल फलन nᵐ होते हैं।'],
+['यदि A में 2 अवयव और B में 3 अवयव हैं, तो A से B में कुल फलन कितने होंगे?',['6','8','9','12'],2,'फलनों की संख्या nᵐ = 3² = 9 होगी।'],
+['फलन f:A→B में A के प्रत्येक अवयव की B में कितनी छवि होती है?',['ठीक एक','कम-से-कम दो','कोई नहीं','ठीक दो'],0,'फलन में प्रांत A के हर अवयव की सह-प्रांत B में ठीक एक छवि होती है।'],
+['यदि f(x)=x² और प्रांत R है, तो f का परास है:',['R','(−∞,0]','[0,∞)','(0,∞)'],2,'वास्तविक संख्या का वर्ग ऋणात्मक नहीं होता और 0 भी प्राप्त होता है; परास [0,∞) है।'],
+['यदि f(x)=2x, f:N→N हो, तो f है:',['एकैकी','आच्छादक','एकैकी और आच्छादक दोनों','न एकैकी न आच्छादक'],0,'2x₁=2x₂ से x₁=x₂, इसलिए एकैकी है। लेकिन N में विषम संख्याएँ किसी की छवि नहीं हैं, इसलिए आच्छादक नहीं।'],
+['यदि A={1,2,3,4,5} और B={1,4,5} हों, तो A से B में फलनों की संख्या है:',['15','25','125','243'],2,'A में 5 अवयव और B में 3 अवयव हैं; कुल फलन 3⁵=243।'],
+['यदि R={(1,1),(2,2),(3,3),(4,4),(5,5)} समुच्चय A={1,2,3,4,5} पर है, तो R है:',['स्वतुल्य','सममित नहीं','संक्रामक नहीं','रिक्त संबंध'],0,'हर (a,a) मौजूद है; समान युग्मों से सममितता और संक्रामकता भी पूरी होती है।'],
+['यदि A={1,2,3,4,5} पर R={(1,3),(2,4),(3,5)} हो, तो R सममित क्यों नहीं है?',['(3,1),(4,2),(5,3) नहीं हैं','(1,1) नहीं है','(1,3) मौजूद है','R में तीन युग्म हैं'],0,'सममित होने के लिए (1,3) के साथ (3,1), (2,4) के साथ (4,2), और (3,5) के साथ (5,3) भी होने चाहिए।']
 ],
 1:[
 ['sin⁻¹(1) का मुख्य मान है:',['0','π/6','π/2','π'],2,'sin⁻¹ का मुख्य मान [−π/2,π/2] में होता है; sin(π/2)=1।'],
@@ -290,24 +356,49 @@ function startTest(){
   });
   $('questions').appendChild(box);
  });
+ $('questions').onchange=updateProgress; updateProgress();
  updateTimer(); clearInterval(timerId);timerId=setInterval(()=>{secondsLeft--;updateTimer();if(secondsLeft<=0){clearInterval(timerId);finishTest(true)}},1000);
  window.scrollTo({top:0,behavior:'smooth'});
 }
 const कCode=0x0915;
+function updateProgress(){
+ const total=active.length||15;
+ const answered=document.querySelectorAll('#questions input[type="radio"]:checked').length;
+ const fill=document.getElementById('progressFill');
+ if(fill)fill.style.width=(answered/total*100)+'%';
+ const progress=document.getElementById('progress');
+ if(progress)progress.textContent=`${answered}/${total} प्रश्न हल किए`;
+}
 function updateTimer(){let m=Math.floor(secondsLeft/60),s=secondsLeft%60;$('timer').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');}
+let lastReviewItems=[];
+function renderReviewFilter(type){
+ const labels={correct:'सही',incorrect:'गलत',unattempted:'छूटे हुए'};
+ document.querySelectorAll('.filter-tab').forEach(b=>b.classList.toggle('active',b.dataset.filter===type));
+ const items=lastReviewItems.filter(x=>x.status===type);
+ $('review').innerHTML=items.length?items.map(x=>`<article class="review-item"><b>प्रश्न ${x.i+1}. ${x.q[0]}</b><br><span class="review-status ${x.status==='correct'?'status-correct':x.status==='incorrect'?'status-incorrect':'status-unattempted'}">${x.status==='correct'?'✓ सही उत्तर':x.status==='incorrect'?'✗ गलत उत्तर':'○ उत्तर नहीं दिया'}</span><div class="subtle">आपका उत्तर: <b>${x.chosen<0?'Attempt नहीं किया':String.fromCharCode(कCode+x.chosen)+') '+x.q[1][x.chosen]}</b></div><div>सही उत्तर: <b style="color:#16834a">${String.fromCharCode(कCode+x.q[2])}) ${x.q[1][x.q[2]]}</b></div><div class="review-solution"><b>📚 समाधान / Explanation</b><br>${x.q[3]||'सही विकल्प को ध्यान से समझें और अध्याय का दोबारा अभ्यास करें।'}</div></article>`).join(''):`<div class="empty-review">इस श्रेणी में कोई प्रश्न नहीं है।</div>`;
+}
 function finishTest(auto=false){
  if(submitted)return; submitted=true;clearInterval(timerId);
- let score=0,answered=0,review='';
+ let score=0,answered=0,correct=0,incorrect=0,unattempted=0;lastReviewItems=[];
  active.forEach((q,i)=>{
   const checked=document.querySelector(`input[name="q${i}"]:checked`);
   const chosen=checked?Number(checked.value):-1;if(chosen>=0)answered++;
-  const correct=q[2]===chosen;if(correct)score++;
-  review+=`<div class="review-item"><b>प्रश्न ${i+1}.</b> ${q[0]}<br><span style="color:${correct?'#16834a':'#b42318'};font-weight:700">${correct?'सही उत्तर':'गलत / उत्तर नहीं दिया'}.</span> सही विकल्प: ${String.fromCharCode(कCode+q[2])}) ${q[1][q[2]]}<br><span class="subtle">${q[3]}</span></div>`;
+  const isCorrect=q[2]===chosen;let status;
+  if(chosen<0){status='unattempted';unattempted++}else if(isCorrect){status='correct';correct++;score++}else{status='incorrect';incorrect++}
+  lastReviewItems.push({q,i,chosen,status});
  });
+ const total=active.length,accuracy=answered?(score/answered*100):0,percent=(score/total*100),attemptRate=answered/total*100;
  $('quizPanel').classList.add('hide');$('resultPanel').classList.remove('hide');
- $('score').innerHTML=`<h3 style="margin:0 0 6px">${auto?'⏰ समय पूरा! टेस्ट अपने-आप जमा हुआ।':'टेस्ट जमा हो गया!'}</h3><p style="font-size:1.15rem;margin:0"><b>स्कोर: ${score}/15</b> • सही: ${score} • गलत/छूटे: ${15-score} • दिए गए उत्तर: ${answered}</p><p style="margin-bottom:0">प्रतिशत: ${(score/15*100).toFixed(1)}%</p>`;
- $('review').innerHTML='<h3>उत्तर और समाधान</h3>'+review;window.scrollTo({top:0,behavior:'smooth'});
+ $('score').innerHTML=`<div class="result-hero"><h3>${auto?'⏰ समय पूरा! टेस्ट अपने-आप जमा हुआ।':'🎉 टेस्ट जमा हो गया!'}</h3><div class="big-score">${score} / ${total}</div><p>आपका स्कोर • ${percent.toFixed(1)}% अंक प्राप्त</p></div>`;
+ $('resultMetrics').innerHTML=`<div class="metric"><b>🟢 ${correct}</b><span>सही प्रश्न</span></div><div class="metric"><b>🔴 ${incorrect}</b><span>गलत प्रश्न</span></div><div class="metric"><b>⚪ ${unattempted}</b><span>छूटे हुए प्रश्न</span></div><div class="metric"><b>${accuracy.toFixed(1)}%</b><span>Attempted में Accuracy</span></div><div class="metric"><b>${answered}/${total}</b><span>Attempted प्रश्न</span></div><div class="metric"><b>${$('timer').textContent}</b><span>शेष समय</span></div>`;
+ const correctEnd=total?correct/total*100:0,wrongEnd=total?(correct+incorrect)/total*100:0;
+ $('analysis').innerHTML=`<div class="analysis-card"><h3 style="margin:0 0 12px">📈 Attempt Analysis</h3><div class="analysis-layout"><div class="donut" style="--correct:${correctEnd}%;--wrong-end:${wrongEnd}%"><div class="donut-center"><b>${total}</b><span>Total Questions</span></div></div><div><div class="legend-row"><i class="dot" style="background:#16a765"></i>Correct <strong>${correct} (${(correct/total*100).toFixed(0)}%)</strong></div><div class="legend-row"><i class="dot" style="background:#e02d3c"></i>Incorrect <strong>${incorrect} (${(incorrect/total*100).toFixed(0)}%)</strong></div><div class="legend-row"><i class="dot" style="background:#cbd5e1"></i>Not Answered <strong>${unattempted} (${(unattempted/total*100).toFixed(0)}%)</strong></div><div class="attempt-rate">Attempt Rate<b>${attemptRate.toFixed(0)}%</b></div></div></div></div>`;
+ $('filterTabs').innerHTML=`<button type="button" class="filter-tab correct" data-filter="correct">🟢 Correct (${correct})</button><button type="button" class="filter-tab incorrect" data-filter="incorrect">🔴 Incorrect (${incorrect})</button><button type="button" class="filter-tab unattempted" data-filter="unattempted">⚪ Unattempted (${unattempted})</button>`;
+ document.querySelectorAll('.filter-tab').forEach(b=>b.addEventListener('click',()=>renderReviewFilter(b.dataset.filter)));
+ $('solutionsArea').classList.add('hide');$('viewSolutions').textContent='📘 View Solutions / हल देखें';
+ window.scrollTo({top:0,behavior:'smooth'});
 }
+$('viewSolutions').addEventListener('click',()=>{const area=$('solutionsArea');const open=area.classList.contains('hide');area.classList.toggle('hide');$('viewSolutions').textContent=open?'📘 Solutions छिपाएँ':'📘 View Solutions / हल देखें';if(open){renderReviewFilter('correct');area.scrollIntoView({behavior:'smooth',block:'start'})}});
 $('start').addEventListener('click',startTest);
 $('submit').addEventListener('click',function(event){
  event.preventDefault();
